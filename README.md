@@ -1,7 +1,6 @@
 # INRC Token Issuer
 
 <div align="center">
-  <!-- Placeholder for token logo -->
   <img src="./inrcoin_frontend/src/assets/pngwing.com%20(1).png" alt="INRC Token Logo" width="200" height="200"/>
   <h3>A Comprehensive ERC20 Token Platform for the $INRC Token</h3>
 </div>
@@ -11,6 +10,23 @@
 INRC Token Issuer is a fully-featured platform for issuing, managing, and interacting with the $INRC token, a custom ERC20 implementation with enhanced security and administrative features. The platform consists of a robust Solidity smart contract and a React-based web interface for users and administrators.
 
 The token is designed with advanced capabilities including blacklisting, pausability, and standard ERC20 functionality, making it suitable for regulated financial applications.
+
+## Live Demo
+
+Experience the INRC Token Issuer platform on Sepolia testnet:
+[https://inrc-token-issuer.vercel.app/](https://inrc-token-issuer.vercel.app/)
+
+To interact with the demo:
+1. Connect with MetaMask set to Sepolia testnet
+2. Request test ETH from a Sepolia faucet if needed
+3. Explore the user dashboard and token functionality
+
+## Contract Verification
+
+The $INRC token contract has been verified on Etherscan:
+[View Verified Contract on Sepolia Etherscan](https://sepolia.etherscan.io/token/0x1c2ff585120219e552a4c3a6ce5b6345cb1efa2c#code)
+
+This verification allows anyone to inspect the deployed contract code and interact with it directly through Etherscan's interface.
 
 ## Features
 
@@ -58,7 +74,6 @@ The INRC token contract follows best practices for security and efficiency:
 
 ## Test Coverage and Quality Assurance
 
-<!-- Placeholder for test coverage screenshot -->
 <div align="center">
   <img src="./inrcoin_frontend/src/assets/Screenshot 2025-03-13 at 11.50.54 AM.png" alt="Test Coverage" width="800"/>
 </div>
@@ -139,6 +154,7 @@ The INRC token contract implements several security measures:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+---
 
 <div align="center">
   <p>Made with ❤️ for a stronger digital India</p>
