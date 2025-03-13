@@ -3,6 +3,12 @@ import { ethers } from 'ethers';
 // Proper image import
 import logoImage from './assets/pngwing.com (1).png';
 
+declare global {
+    interface Window {
+        ethereum?: any;
+    }
+}
+
 // Contract ABI
 const contractABI = [
     "function name() view returns (string)",
@@ -137,15 +143,14 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({
-                                           walletConnected,
-                                           userAddress,
-                                           connectWallet,
-                                           disconnectWallet,
-                                           goToUserDashboard,
-                                           goToAdminDashboard,
-                                           currentView,
+                                                 walletConnected,
+                                                 userAddress,
+                                                 connectWallet,
+                                                 disconnectWallet,
+                                                 goToUserDashboard,
+                                                 goToAdminDashboard,
                                            setCurrentView,
-                                       }) => (
+                                             }) => (
     <div className="flex justify-between items-center px-10 py-5">
         <div className="flex gap-5">
             <a href="#" onClick={() => setCurrentView('home')} className="text-black no-underline text-lg hover:underline">FAQs</a>
@@ -234,7 +239,12 @@ interface UserDashboardProps {
     contract: ethers.Contract | null;
 }
 
-const UserDashboard: React.FC<UserDashboardProps> = ({ tokenData, userAddress, userBalance, contract }) => {
+const UserDashboard: React.FC<UserDashboardProps> = ({
+                                                         tokenData,
+// changed from userAddress
+                                                         userBalance,
+                                                         contract
+                                                     }) => {
     const [recipient, setRecipient] = useState('');
     const [amount, setAmount] = useState('');
     const [spender, setSpender] = useState('');
@@ -361,7 +371,7 @@ interface AdminDashboardProps {
     contract: ethers.Contract | null;
 }
 
-const AdminDashboard: React.FC<AdminDashboardProps> = ({ tokenData, userAddress, isOwner, setCurrentView, contract }) => {
+const AdminDashboard: React.FC<AdminDashboardProps> = ({ tokenData,isOwner, setCurrentView, contract }) => {
     const [isPaused, setIsPaused] = useState(false);
     const [mintTo, setMintTo] = useState('');
     const [mintAmount, setMintAmount] = useState('');
